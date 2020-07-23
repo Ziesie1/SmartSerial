@@ -1,0 +1,23 @@
+{
+    "name": "SmartSerial",
+    "version": "1.0.0",
+    "description": "A better serial library for Arduino, with practical functions.",
+    "keywords": "serial, better, practically",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/Ziesie1/SmartSerial.git"
+    },
+    "authors":
+    [
+      {
+        "name": "Maurice Ziesmann",
+        "email": "mauricezie@googlemail.com",
+        "maintainer": true
+      }
+    ],
+    "license": "MIT",
+    "frameworks": "arduino",
+    "platforms": "*"
+  }
+  
