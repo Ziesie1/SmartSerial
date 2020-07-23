@@ -1,5 +1,5 @@
-#ifndef SERIAL_COMMUNKATION_HPP
-#define SERIAL_COMMUNKATION_HPP
+#ifndef SMART_SERIAL_HPP
+#define SMART_SERIAL_HPP
 
 #include <Arduino.h>
 #include <string.h>
