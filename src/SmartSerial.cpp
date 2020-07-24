@@ -2,13 +2,9 @@
 
 const String utilities::ssEndl = "\r\n"; // LF & CR
 const String utilities::ssSpace = " "; // space
-SmartSerial utilities::ss {}; // be of use for the projekt to manage the seriel communication
 
-SmartSerial::SmartSerial()
-{ }
-
-SmartSerial::SmartSerial(HardwareSerial& serial)
-    :serial {&serial}
+SmartSerial::SmartSerial(HardwareSerial& serial, const String & label, const String & separator)
+    :serial {&serial}, label{label}, separator{separator}
 { }
 
 /*
@@ -17,4 +13,31 @@ SmartSerial::SmartSerial(HardwareSerial& serial)
 void SmartSerial::workWith(HardwareSerial& serial)
 {
     this->serial = &serial;
+}
+
+SmartSerial const& SmartSerial::operator()(String const& tag) const
+{
+    if(this->isEnabled)
+    {
+        this->print(this->label);
+        this->print(tag);
+        this->print(this->separator);
+    }
+    return *this;
+}
+
+/*
+    enable the Serial output
+*/
+void SmartSerial::enable()
+{
+    this->isEnabled = true;
+}
+
+/*
+    disable the Serial output
+*/
+void SmartSerial::disable()
+{
+    this->isEnabled = false;
 }

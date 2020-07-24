@@ -7,10 +7,12 @@
 class SmartSerial
 {
     HardwareSerial* serial;
+    bool isEnabled = true;
+    const String label = "";
+    const String separator = "";
     
 public:
-    SmartSerial();
-    SmartSerial(HardwareSerial& serial);
+    SmartSerial(HardwareSerial& serial, const String & label = "D/", const String & separator = " : ");
     
     void workWith(HardwareSerial& serial);
 
@@ -20,6 +22,10 @@ public:
     void println(T const& message) const;
     template<typename T>
     SmartSerial const& operator<<(T const& message) const;
+    SmartSerial const& operator()(String const& tag) const;
+
+    void enable();
+    void disable();
 
 };
 
@@ -28,7 +34,6 @@ namespace utilities
 {
     extern const String ssEndl;
     extern const String ssSpace;
-    extern SmartSerial ss;
 }
 
 #include "SmartSerial.inl"

@@ -7,11 +7,14 @@
 template<typename T>
 void SmartSerial::print(T const& message) const
 {
-    if(this->serial == nullptr)
+    if(this->isEnabled)
     {
-        return;
+        if(this->serial == nullptr)
+        {
+            return;
+        }
+        this->serial->print(message);
     }
-    this->serial->print(message);
 }
 
 /*
@@ -21,11 +24,14 @@ void SmartSerial::print(T const& message) const
 template<typename T>
 void SmartSerial::println(T const& message) const
 {
-    if(this->serial == nullptr)
+    if(this->isEnabled)
     {
-        return;
+        if(this->serial == nullptr)
+        {
+            return;
+        }
+        this->serial->println(message);
     }
-    this->serial->println(message);
 }
 
 /*
@@ -34,10 +40,14 @@ void SmartSerial::println(T const& message) const
 template<typename T>
 SmartSerial const& SmartSerial::operator<<(T const& message) const
 {
-    if(this->serial == nullptr)
+    if(this->isEnabled)
     {
-        return *this;
+        if(this->serial == nullptr)
+        {
+            return *this;
+        }
+        this->serial->print(message);
     }
-    this->serial->print(message);
     return *this;
 }
+
