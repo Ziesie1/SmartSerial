@@ -2,7 +2,7 @@
 
 Use Serial with practical functions.
 
-## Easy way to concatenate numbers with strings
+## Easy way to concatenate primitives data types
 Example:
 ```cpp
 #include <Arduino.h>
@@ -31,8 +31,8 @@ Output:
 Temperature: 24.00 °C, status: 1, time: 61 ms
 ```
 
-## Use induviduel outputs formats
-You can differentiate between various types of Messages.
+## Use individual outputs formats
+You can differentiate between various types of messages.
 
 Example:
 ```cpp
