@@ -9,7 +9,7 @@ Example:
 #include <SmartSerial.hpp>
 
 using namespace utilities;
-SmartSerial ss = SmartSerial(Serial);
+SmartSerial ss (Serial);
 
 void setup() {
   Serial.begin(9600);
@@ -40,8 +40,8 @@ Example:
 #include <SmartSerial.hpp>
 
 using namespace utilities;
-SmartSerial sDebug = SmartSerial(Serial, "Debug/"," -> ");
-SmartSerial sError = SmartSerial(Serial, "Error/"," # ");
+SmartSerial sDebug (Serial, "Debug/"," -> ");
+SmartSerial sError (Serial, "Error/"," # ");
 
 
 void setup() {
