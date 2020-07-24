@@ -1,7 +1,0 @@
-.pio
-.vscode/
-.travis.yml
-lib/
-platformio.ini
-test/
-src/main.cpp
