@@ -1,4 +1,4 @@
-#include "../include/SmartSerial.hpp"
+#include <SmartSerial.hpp>
 
 const String utilities::ssEndl = "\r\n"; // LF & CR
 const String utilities::ssSpace = " "; // space
@@ -21,6 +21,19 @@ SmartSerial const& SmartSerial::operator()(String const& tag) const
     {
         this->print(this->label);
         this->print(tag);
+        this->print(this->separator);
+    }
+    return *this;
+}
+
+SmartSerial const& SmartSerial::operator()(String const& file, int line) const
+{
+    if(this->isEnabled)
+    {
+        this->print(this->label);
+        this->print(file);
+        this->print(":");
+        this->print(line);
         this->print(this->separator);
     }
     return *this;

@@ -23,12 +23,15 @@ public:
     template<typename T>
     SmartSerial const& operator<<(T const& message) const;
     SmartSerial const& operator()(String const& tag) const;
+    SmartSerial const& operator()(String const& file, int line) const;
 
     void enable();
     void disable();
 
 };
 
+#define POS __FILE__,__LINE__
+#define FUNC ((String)__FUNCTION__)+"()"
 
 namespace utilities
 {

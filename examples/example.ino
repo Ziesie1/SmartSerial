@@ -18,18 +18,18 @@ void setup() {
   ss << "Temperature: " << temp << " °C" << ", status: " << status;
   ss << ", time: " << time << " ms" << ssEndl;
 
-  sDebug("setup()") << 20.0 << "° C" << ssEndl;
+  sDebug(FUNC) << 20.0 << "° C" << ssEndl;
   sDebug.disable();
-  sDebug("setup()") << "some other debug informations" << ssEndl; // will not displayed
+  sDebug(POS) << "some other debug informations" << ssEndl; // will not displayed
 
-  sError("setup()") << "Houston, we have a problem." << ssEndl;
+  sError(POS) << "Houston, we have a problem." << ssEndl;
 }
 
 /*
   Output:
-  Temperature: 24.00 °C, status: 1, time: 61 ms
+  Temperature: 24.00 °C, status: 1, time: 65 ms
   Debug/setup() -> 20.00° C
-  Error/setup() # Houston, we have a problem.
+  Error/main.cpp:25 # Houston, we have a problem.
 */
 
 void loop() { }

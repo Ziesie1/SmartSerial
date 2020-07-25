@@ -47,11 +47,11 @@ SmartSerial sError (Serial, "Error/"," # ");
 void setup() {
   Serial.begin(9600);
  
-  sDebug("setup()") << 20.0 << "° C" << ssEndl;
+  sDebug(FUNC) << 20.0 << "° C" << ssEndl;
   sDebug.disable();
-  sDebug("setup()") << "some other debug informations" << ssEndl; // will not displayed
+  sDebug(POS) << "some other debug informations" << ssEndl; // will not displayed
 
-  sError("setup()") << "Houston, we have a problem." << ssEndl;
+  sError(POS) << "Houston, we have a problem." << ssEndl;
 }
 
 void loop() { }
@@ -60,6 +60,6 @@ void loop() { }
 Output:
 ```
 Debug/setup() -> 20.00° C
-Error/setup() # Houston, we have a problem.
+Error/main.cpp:25 # Houston, we have a problem.
 ```
 
