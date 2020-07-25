@@ -18,6 +18,17 @@
     ],
     "license": "MIT",
     "frameworks": "arduino",
-    "platforms": "*"
+    "platforms": "*",
+    "export": {
+      "include":
+      [
+          "examples/*",
+          "include/*",
+          "src/SmartSerial.cpp",
+          "keywords.txt",
+          "library.json",
+          "library.properties",
+          "readme.md"
+      ]
+    }
   }
-  

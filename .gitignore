@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!examples/*
+!include/*
+!src/SmartSerial.cpp
+!keywords.txt
+!library.json
+!library.properties
+!readme.md
