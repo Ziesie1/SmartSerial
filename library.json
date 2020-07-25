@@ -1,8 +1,8 @@
 {
     "name": "SmartSerial",
-    "version": "1.0.0",
-    "description": "A better serial library for Arduino, with practical functions.",
-    "keywords": "serial, better, practically",
+    "version": "1.0.1",
+    "description": "A helpful serial library for Arduino, with practical functions.",
+    "keywords": "serial, formatting, practically",
     "repository":
     {
       "type": "git",

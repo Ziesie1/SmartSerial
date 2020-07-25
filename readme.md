@@ -1,6 +1,9 @@
 # SmartSerial
 
-Use Serial with practical functions.
+This library expand the Arduino Serial Library.
+
+SmartSerial adds some practical functions, which facilitate the output of complex messages over the serial interface.
+
 
 ## Easy way to concatenate primitives data types
 Example:
