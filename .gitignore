@@ -11,3 +11,4 @@
 !library.properties
 !readme.md
 !test/*
+!platformio.ini
