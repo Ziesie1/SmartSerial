@@ -29,9 +29,14 @@ public:
     void disable();
 
 };
-
-#define POS __FILE__,__LINE__
-#define FUNC ((String)__FUNCTION__)+"()"
+/**
+ * Makro for filename and fileposition.
+*/
+#define SS_POS __FILE__,__LINE__
+/**
+ * Makro for the current function name
+*/
+#define SS_FUNC ((String)__FUNCTION__)+"()"
 
 namespace utilities
 {

@@ -15,14 +15,14 @@ void setup() {
   bool status = true;
   long time = millis();
 
-  ss << "Temperature: " << temp << " °C" << ", status: " << status;
-  ss << ", time: " << time << " ms" << ssEndl;
+  ss << "Temperature: " << temp << " °C" << ", status: " << status << ", time: " 
+     << time << " ms" << ssEndl;
 
-  sDebug(FUNC) << 20.0 << "° C" << ssEndl;
+  sDebug(SS_FUNC) << 20.0 << "° C" << ssEndl;
   sDebug.disable();
-  sDebug(POS) << "some other debug informations" << ssEndl; // will not displayed
+  sDebug(SS_POS) << "some other debug informations" << ssEndl; // will not displayed
 
-  sError(POS) << "Houston, we have a problem." << ssEndl;
+  sError(SS_POS) << "Houston, we have a problem." << ssEndl;
 }
 
 /*

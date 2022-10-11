@@ -50,11 +50,11 @@ SmartSerial sError (Serial, "Error/"," # ");
 void setup() {
   Serial.begin(9600);
  
-  sDebug(FUNC) << 20.0 << "° C" << ssEndl;
+  sDebug(SS_FUNC) << 20.0 << "° C" << ssEndl;
   sDebug.disable();
-  sDebug(POS) << "some other debug informations" << ssEndl; // will not displayed
+  sDebug(SS_POS) << "some other debug informations" << ssEndl; // will not displayed
 
-  sError(POS) << "Houston, we have a problem." << ssEndl;
+  sError(SS_POS) << "Houston, we have a problem." << ssEndl;
 }
 
 void loop() { }
@@ -66,3 +66,5 @@ Debug/setup() -> 20.00° C
 Error/main.cpp:25 # Houston, we have a problem.
 ```
 
+# Developping
+Run tests with: `pio test -e <your-env-in-platform.ini>`
